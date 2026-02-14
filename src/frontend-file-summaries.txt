@@ -1,0 +1,7 @@
+{
+  "frontend/src/main.tsx": "Application entry point that sets up React Query, Internet Identity provider, and renders the root App component with Toaster for notifications.",
+  "frontend/src/index.css": "Global styles with Tailwind directives, OKLCH color system for black gradient theme with warm orange/amber accents, and custom utility classes for gradients and glow effects.",
+  "frontend/src/lib/brand.ts": "Centralized branding constants exporting logo path (now pointing to IMG_20260213_043356_921-2.webp), alt text, brand name, and tagline for consistent usage across all components.",
+  "frontend/src/components/SiteHeader.tsx": "Sticky header component with responsive navigation, mobile menu sheet, and logo imported from centralized brand constants.",
+  "frontend/src/components/SiteFooter.tsx": "Footer component with brand logo, quick links, contact info, and attribution, all using centralized brand constants for consistency."
+}

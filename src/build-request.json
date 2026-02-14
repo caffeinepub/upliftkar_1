@@ -1,0 +1,72 @@
+{
+  "kind": "build_request",
+  "title": "Fix broken logo rendering and replace all logo usages with uploaded IMG_20260213_043356_921-2.webp",
+  "priority": "high",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "text": "Add the uploaded logo image file IMG_20260213_043356_921-2.webp as a frontend static asset and ensure it is served from a stable public path that can be referenced by the React app.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Use this logo on every logo icon it shows no picture u mightve made a mistake just put this picture  on all logo things"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The file IMG_20260213_043356_921-2.webp exists in the frontend public assets and is accessible via a direct browser request (no 404).",
+        "The asset path used by the app matches the actual location/filename of IMG_20260213_043356_921-2.webp."
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "text": "Update the centralized branding configuration so BRAND.logo.path points to the new uploaded logo (IMG_20260213_043356_921-2.webp), and ensure the alt text remains appropriate in English.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Use this logo on every logo icon it shows no picture u mightve made a mistake just put this picture  on all logo things"
+        ]
+      },
+      "acceptanceCriteria": [
+        "frontend/src/lib/brand.ts references IMG_20260213_043356_921-2.webp as the logo path.",
+        "Header and footer logo images render correctly using BRAND.logo.path with no broken image icon."
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "text": "Audit the frontend for any remaining logo/image references that do not use BRAND.logo.path (including any old logo filenames/paths) and replace them so that all logo placements use the uploaded IMG_20260213_043356_921-2.webp consistently.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-3"
+        ],
+        "quotes": [
+          "Use this logo on every logo icon it shows no picture u mightve made a mistake just put this picture  on all logo things"
+        ]
+      },
+      "acceptanceCriteria": [
+        "There are no remaining references to the old logo path '/assets/upliftkar-logo.webp' or other older logo assets in the frontend codebase.",
+        "All visible logo placements across pages (including navigation/header and footer branding) display the IMG_20260213_043356_921-2.webp logo correctly."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (read-only UI component sources).",
+    "Do not modify immutable hook files under frontend/src/hooks (compose around them if needed).",
+    "Keep backend as single-actor Motoko; no backend changes are required for this request."
+  ],
+  "nonGoals": [
+    "Changing site copy, layout, routes, or adding new pages.",
+    "Adding new authentication or backend functionality.",
+    "Generating new images or redesigning the logo."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

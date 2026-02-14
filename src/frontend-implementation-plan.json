@@ -1,0 +1,77 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Fix logo rendering by replacing all logo usages with IMG_20260213_043356_921-2.webp",
+  "requirements": [
+    {
+      "id": "REQ-11",
+      "summary": "Add the uploaded logo as a public static asset served from a stable path.",
+      "acceptanceCriteria": [
+        "The file IMG_20260213_043356_921-2.webp exists in the frontend public assets and is accessible via a direct browser request (no 404).",
+        "The asset path used by the app matches the actual location/filename of IMG_20260213_043356_921-2.webp."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/IMG_20260213_043356_921-2.webp",
+          "operation": "create",
+          "description": "Add the uploaded logo image file as a static asset so it can be served at a stable public path and referenced by the React app."
+        }
+      ]
+    },
+    {
+      "id": "REQ-12",
+      "summary": "Update centralized branding config to point BRAND.logo.path to the new logo and keep appropriate English alt text.",
+      "acceptanceCriteria": [
+        "frontend/src/lib/brand.ts references IMG_20260213_043356_921-2.webp as the logo path.",
+        "Header and footer logo images render correctly using BRAND.logo.path with no broken image icon."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/lib/brand.ts",
+          "operation": "modify",
+          "description": "Update BRAND.logo.path to reference the new public asset path for IMG_20260213_043356_921-2.webp (served from frontend/public/assets) and keep BRAND.logo.alt appropriate in English."
+        },
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Ensure the header logo renders using BRAND.logo.path and BRAND.logo.alt (no hardcoded logo asset paths), to prevent broken image rendering."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Ensure the footer logo renders using BRAND.logo.path and BRAND.logo.alt (no hardcoded logo asset paths), to prevent broken image rendering."
+        }
+      ]
+    },
+    {
+      "id": "REQ-13",
+      "summary": "Audit and replace any remaining logo references so all logo placements consistently use BRAND.logo.path.",
+      "acceptanceCriteria": [
+        "There are no remaining references to the old logo path '/assets/upliftkar-logo.webp' or other older logo assets in the frontend codebase.",
+        "All visible logo placements across pages (including navigation/header and footer branding) display the IMG_20260213_043356_921-2.webp logo correctly."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Audit and remove any remaining direct logo imports or legacy paths (including '/assets/upliftkar-logo.webp'); ensure all logo rendering uses BRAND.logo.path."
+        },
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "modify",
+          "description": "Audit and remove any remaining direct logo imports or legacy paths (including '/assets/upliftkar-logo.webp'); ensure all logo rendering uses BRAND.logo.path."
+        },
+        {
+          "path": "frontend/src/pages/Home.tsx",
+          "operation": "modify",
+          "description": "Audit the page for any direct logo usage or legacy asset references and replace them with BRAND.logo.path where applicable, ensuring consistent logo rendering across the app."
+        },
+        {
+          "path": "frontend/src/lib/brand.ts",
+          "operation": "modify",
+          "description": "Confirm no legacy logo paths remain referenced in branding constants and that only the new IMG_20260213_043356_921-2.webp path is used for BRAND.logo.path."
+        }
+      ]
+    }
+  ]
+}

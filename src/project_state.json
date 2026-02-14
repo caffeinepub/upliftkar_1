@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Website for influencer marketing agency (Upliftkar) with black gradient styling, multi-page layout (Home, About, Services, Contact), featuring founders Samuel Mehrulia and Jayden Mark, punchline \"Chal Kuch kar Upliftkar\", brand partnerships service focus, and homepage contact info (upliftkar@gmail.com, Instagram: Upliftkar) plus provided logo.",
+  "architectural_notes": [
+    "Planned pages: Home, About, Services, Contact.",
+    "Branding: punchline \"Chal Kuch kar Upliftkar\"; black gradient visual theme.",
+    "Primary contact: upliftkar@gmail.com; Instagram: Upliftkar.",
+    "Logo usage should be site-wide (where appropriate), not limited to the header.",
+    "Ensure the same provided logo image asset is used for every logo/icon instance across the site, with correct file path/import and reliable rendering in all pages/components."
+  ],
+  "known_issues": [
+    "Logo asset referenced by user but not provided in conversation content/attachment.",
+    "Logo image is not rendering (shows no picture) in one or more logo/icon placements; likely broken/mismatched asset reference or path."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-multi-page-marketing-website-for-the-influencer-marketing-agency-upliftkar-with-the-following-pages-and-routes-home-about-services-contact",
+      "title": "Create a multi-page marketing website for the influencer marketing agency “Upliftkar” with the following pages and routes: Home, About, Services, Contact.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-consistent-site-wide-header-navigation-that-includes-the-provided-upliftkar-logo-and-links-to-home-about-services-and-contact",
+      "title": "Implement a consistent site-wide header navigation that includes the provided Upliftkar logo and links to Home, About, Services, and Contact.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-black-gradient-visual-theme-across-the-website-with-a-coherent-distinctive-style-typography-spacing-components-and-consistent-use-of-accent-color-s-avoid-blue-purple",
+      "title": "Apply a black gradient visual theme across the website with a coherent, distinctive style (typography, spacing, components) and consistent use of accent color(s) (avoid blue/purple).",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-home-page-prominently-display-the-punchline-chal-kuch-kar-upliftkar-and-show-contact-details-on-the-homepage-including-email-upliftkar-gmail-com-and-instagram-handle-upliftkar",
+      "title": "Home page: prominently display the punchline “Chal Kuch kar Upliftkar” and show contact details on the homepage including email “upliftkar@gmail.com” and Instagram handle “Upliftkar”.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-about-page-include-an-about-the-founders-section-listing-samuel-mehrulia-as-founder-and-jayden-mark-as-co-founder-with-short-bios-concise-marketing-focused-copy",
+      "title": "About page: include an “About the Founders” section listing Samuel Mehrulia as Founder and Jayden Mark as Co‑Founder, with short bios (concise marketing-focused copy).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-services-page-highlight-that-the-agency-specializes-in-brand-partnerships-and-include-multiple-service-items-relevant-to-influencer-marketing",
+      "title": "Services page: highlight that the agency specializes in Brand Partnerships and include multiple service items relevant to influencer marketing.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-contact-page-provide-a-simple-contact-section-that-repeats-the-email-upliftkar-gmail-com-and-instagram-handle-upliftkar-and-includes-an-optional-basic-inquiry-form-that-does-not-require-external-email-services-e-g-mailto-submission-or-on-page-copy-to-clipboard",
+      "title": "Contact page: provide a simple contact section that repeats the email “upliftkar@gmail.com” and Instagram handle “Upliftkar”, and includes an optional basic inquiry form that does not require external email services (e.g., mailto submission or on-page copy-to-clipboard).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-uploaded-upliftkar-logo-image-as-a-static-asset-and-use-it-for-site-branding-header-logo-ensure-it-is-optimized-for-web-display-reasonable-dimensions-file-size-and-has-appropriate-alt-text",
+      "title": "Add the uploaded Upliftkar logo image as a static asset and use it for site branding (header/logo). Ensure it is optimized for web display (reasonable dimensions/file size) and has appropriate alt text.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-images-if-any-under-frontend-public-assets-generated-and-use-them-in-the-ui-where-appropriate-e-g-page-hero-background",
+      "title": "Add generated static images (if any) under frontend/public/assets/generated and use them in the UI where appropriate (e.g., page hero background).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-replace-all-upliftkar-logo-usages-across-the-site-to-use-the-newly-uploaded-logo-image-img-20260213-043356-921-1-webp-consistently-including-the-header-and-footer-branding-and-ensure-there-are-no-remaining-references-to-any-older-different-logo-assets",
+      "title": "Replace all Upliftkar logo usages across the site to use the newly uploaded logo image (IMG_20260213_043356_921-1.webp) consistently, including the header and footer branding, and ensure there are no remaining references to any older/different logo assets.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-centralized-branding-configuration-so-brand-logo-path-points-to-the-new-uploaded-logo-img-20260213-043356-921-2-webp-and-ensure-the-alt-text-remains-appropriate-in-english",
+      "title": "Update the centralized branding configuration so BRAND.logo.path points to the new uploaded logo (IMG_20260213_043356_921-2.webp), and ensure the alt text remains appropriate in English.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-audit-the-frontend-for-any-remaining-logo-image-references-that-do-not-use-brand-logo-path-including-any-old-logo-filenames-paths-and-replace-them-so-that-all-logo-placements-use-the-uploaded-img-20260213-043356-921-2-webp-consistently",
+      "title": "Audit the frontend for any remaining logo/image references that do not use BRAND.logo.path (including any old logo filenames/paths) and replace them so that all logo placements use the uploaded IMG_20260213_043356_921-2.webp consistently.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create multi-page agency website (Home, About, Services, Contact)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Design theme: black gradient styling across the website",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Homepage content: punchline \"Chal Kuch kar Upliftkar\" + contact details (upliftkar@gmail.com, Instagram: Upliftkar)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "About page section for founders: Samuel Mehrulia (founder) and Jayden Mark (co-founder)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Services page including Brand Partnerships (and other service items if needed)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add and use provided logo in site header/branding",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Use the provided logo throughout the site (not just header)—e.g., footer/sections and other appropriate placements",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add the uploaded logo image file IMG_20260213_043356_921-2.webp as a frontend static asset and ensure it is served from a stable public path that can be referenced by the React app.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Upliftkar",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

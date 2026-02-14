@@ -1,0 +1,63 @@
+{
+  "kind": "coverage_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-14T18:41:59.993Z",
+  "sources": {
+    "buildRequest": true,
+    "implementationPlan": true
+  },
+  "requirements": {
+    "total": 3,
+    "implemented": 2,
+    "items": [
+      {
+        "id": "REQ-11",
+        "summary": "Add the uploaded logo image file IMG_20260213_043356_921-2.webp as a frontend static asset and ensure it is served from a stable public path that can be referenced by the React app.",
+        "status": "missing",
+        "plannedFiles": [
+          "frontend/public/assets/IMG_20260213_043356_921-2.webp"
+        ],
+        "matchedFiles": []
+      },
+      {
+        "id": "REQ-12",
+        "summary": "Update the centralized branding configuration so BRAND.logo.path points to the new uploaded logo (IMG_20260213_043356_921-2.webp), and ensure the alt text remains appropriate in English.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/lib/brand.ts",
+          "frontend/src/components/SiteHeader.tsx",
+          "frontend/src/components/SiteFooter.tsx"
+        ],
+        "matchedFiles": [
+          "frontend/src/lib/brand.ts"
+        ]
+      },
+      {
+        "id": "REQ-13",
+        "summary": "Audit the frontend for any remaining logo/image references that do not use BRAND.logo.path (including any old logo filenames/paths) and replace them so that all logo placements use the uploaded IMG_20260213_043356_921-2.webp consistently.",
+        "status": "implemented",
+        "plannedFiles": [
+          "frontend/src/components/SiteHeader.tsx",
+          "frontend/src/components/SiteFooter.tsx",
+          "frontend/src/pages/Home.tsx",
+          "frontend/src/lib/brand.ts"
+        ],
+        "matchedFiles": [
+          "frontend/src/lib/brand.ts"
+        ]
+      }
+    ]
+  },
+  "changedFiles": [
+    "build-request.json",
+    "feature_evidence.json",
+    "frontend-file-summaries.txt",
+    "frontend-implementation-plan.json",
+    "frontend/public/assets/upliftkar-logo.webp",
+    "frontend/src/lib/brand.ts",
+    "project_state.json",
+    "scratch/component-selection.json",
+    "spec.md",
+    "spec_vs_diff_report.json"
+  ]
+}
